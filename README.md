@@ -1,13 +1,5 @@
-# Election_Analysis
+# Election Analysis
 
-## Project Overview
-Complete an election audit for the Colorado congressional election. 
-
-## Resources
-- Data Source: 
-- Software:
-
-## Summary
-
-## Challenge Overview
-## Challenge Summary
+## Overview of Election Audit
+## Election-Audit Results
+## Election-Audit Summary

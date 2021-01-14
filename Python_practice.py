@@ -1,15 +1,67 @@
+#import random
+#print("Let's Play Rock Paper Scissors!")
+#options = ['r', 'p', 's']
+#computer_choice = random.choice(options)
+#user_choice = input('Make your choice:(r)ock, (p)aper, (s)cissors?')
+#print("Computer chose: " + computer_choice)
 
+#if user_choice == computer_choice:
+    #print("tie")
+#elif user_choice == "r" and computer_choice == 'p':
+        #print("you lose")
+#elif user_choice == 'r' and computer_choice == 's':
+        #print("you win")
+#elif user_choice == 'p' and computer_choice == 'r':
+        #print("you win")
+#elif user_choice == 'p' and computer_choice == 's':
+        #print("you lose")
+#elif user_choice == 's' and computer_choice == 'p':
+        #print("you lose")
+#elif user_choice == 's' and computer_choice == 'r':
+        #print("you lose")
 
-
-import csv
 import os
+import csv
 
-## Open file to read
-file_to_load = 'Analysis_Projects/Election_Analysis/Resources/election_results.csv'
-with open(file_to_load) as election_data:
-    print(election_data)
-## Create Text file
-file_to_save = 'Analysis_Projects/Election_Analysis/Analysis/election_analysis.txt'
-with open(file_to_save, "w") as txt_file:
-    txt_file.write("Counties in the Election\n ---------------------------\nArapahoe\nDenver\nJefferson")
+video = input('What show or movie are you looking for?')
 
+csvpath = os.path.join('netflix.csv')
+txtpath = os.path.join('netflix_data.txt')
+
+found = False
+
+# Open the CSV
+with open(csvpath, newline="") as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+
+    # Loop through looking for the video
+    for row in csvreader:
+        if row[0] == video:
+            # Bonus - Step 2: Set the variable created in Step 1 to confirm we have found the video
+            found = True
+
+            # Bonus - Step 3: Stop at first results to avoid duplicates
+            with open(txtpath, 'w') as textfile:
+                netflix_data = (
+                    f'Title: {row[0]}\n'
+                    f'Rating Level: {row[1]}\n'
+                    f'Rated: {row[5]}\n'
+                    )
+                textfile.write(netflix_data)
+
+                print(netflix_data)
+            
+            break
+
+    # Bonus - Step 4:  If the video is never found, alert the user
+    if found is False:
+        print("Sorry about this, we don't seem to have what you are looking for!")
+
+
+    
+    
+
+
+
+
+    

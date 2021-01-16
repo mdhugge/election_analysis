@@ -11,7 +11,7 @@ Perorm an elction audit for the Colorado congressional election using Python. Th
 7. Percentage of votes from each county out of the total count
 8. The county with the highest turnout
 
-## Election-Audit Results
+## Election Audit Results
 ![Election_Analysis](https://github.com/mdhugge/election_analysis/blob/main/Analysis/Election_Analysis.png)
 
 - Number of votes cast in this congressional election
@@ -86,5 +86,5 @@ for candidate_name in candidate_votes:
     winning_percentage = vote_percentage 
 ```
 
-## Election-Audit Summary
+## Election Audit Summary
 

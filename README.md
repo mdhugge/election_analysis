@@ -32,7 +32,7 @@ for row in reader:
 
 - Breakdown of the number of votes and the percentage of total votes for each county in the precinct
 
-The county name is the second column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the name of each county and add it to a list of all counties. An 'if' statement was used to ensure that each county was only included once in the list and to begin tracking the number of votes cast in each county. A 'for' loop was used to calculate the total number of votes for each county and precentage of votes each county cast. 
+The county name is the second column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the name of each county and add it to a list of all counties. An ' if ' statement was used to ensure that each county was only included once in the list and to begin tracking the number of votes cast in each county. A ' for ' loop was used to calculate the total number of votes for each county and precentage of votes each county cast. 
 
 ```
 for row in reader:
@@ -53,7 +53,7 @@ for county_name in county_votes:
 
 - County with the largest number of votes
 
-An 'if' statement was used to determine the county with the largest turnover. 
+An ' if ' statement was used to determine the county with the largest turnover. 
 
 ```
 for county_name in county_votes:
@@ -67,7 +67,7 @@ for county_name in county_votes:
 
 - Breakdown of the number of votes and the percentage of the total votes each candidate received
 
-The candidate name is the third column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the candidate name and add it to a list of all candidates. An 'if' statement was used to ensure that each candidate was only included once in the list and to begin tracking the number of votes for each candidate. A 'for' loop was used to calculate the total number of votes for each candidate and precentage of votes each candidate won. 
+The candidate name is the third column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the candidate name and add it to a list of all candidates. An ' if ' statement was used to ensure that each candidate was only included once in the list and to begin tracking the number of votes for each candidate. A ' for ' loop was used to calculate the total number of votes for each candidate and precentage of votes each candidate won. 
 
 ```
 for row in reader:
@@ -88,7 +88,7 @@ for candidate_name in candidate_votes:
 
 - Wiinning candidate, their vote count, and their percentage of the total votes
 
-An 'if' statement was used to determine the winning candidate, the number of votes they recieved and the percentage of total votes they received. 
+An ' if ' statement was used to determine the winning candidate, the number of votes they recieved and the percentage of total votes they received. 
 
 ```
 for candidate_name in candidate_votes:

@@ -27,6 +27,8 @@ for row in reader:
   total_votes = total_votes + 1
 ```
 
+![Total_Votes](https://github.com/mdhugge/election_analysis/blob/main/Resources/Total%20Votes.png)
+
 - Breakdown of the number of votes and the percentage of total votes for each county in the precinct
 
 The county name is the second column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the name of each county and add it to a list of all counties. An 'if' statement was used to ensure that each county was only included once in the list and to begin tracking the number of votes cast in each county. A 'for' loop was used to calculate the total number of votes for each county and precentage of votes each county cast. 
@@ -46,6 +48,8 @@ for county_name in county_votes:
   vote_percentage_county = float(votes_percounty) / float(total_votes) * 100
 ```
 
+![County_Votes](https://github.com/mdhugge/election_analysis/blob/main/Resources/County%20Votes.png)
+
 - County with the largest number of votes
 
 An 'if' statement was used to determine the county with the largest turnover. 
@@ -57,6 +61,8 @@ for county_name in county_votes:
     county_count = votes_percounty
     winning_county = county_name 
 ```
+
+![County_Turnover](https://github.com/mdhugge/election_analysis/blob/main/Resources/County%20Turnover.png)
 
 - Breakdown of the number of votes and the percentage of the total votes each candidate received
 
@@ -77,6 +83,8 @@ for candidate_name in candidate_votes:
   vote_percentage = float(votes) / float(total_votes) * 100
 ```
 
+![Candidate](https://github.com/mdhugge/election_analysis/blob/main/Resources/Candidate.png)
+
 - Wiinning candidate, their vote count, and their percentage of the total votes
 
 An 'if' statement was used to determine the winning candidate, the number of votes they recieved and the percentage of total votes they received. 
@@ -89,6 +97,8 @@ for candidate_name in candidate_votes:
     winning_candidate = candidate_name
     winning_percentage = vote_percentage 
 ```
+
+![Winner](https://github.com/mdhugge/election_analysis/blob/main/Resources/Winner.png)
 
 ## Election Audit Summary
 This code uses variables and indexing to reference candidates and counties from [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv). Since, the names of candidates and counties are not fixed in the code, it makes it easy to use the same code for other congressional elections with different candidates and counties as long as the data file follows a similar structure.

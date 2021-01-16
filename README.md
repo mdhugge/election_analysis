@@ -15,17 +15,13 @@ Perorm an elction audit for the Colorado congressional election using Python. Th
 ![Election_Analysis](https://github.com/mdhugge/election_analysis/blob/main/Analysis/Election_Analysis.png)
 
 - Number of votes cast in this congressional election
-Each row in the document represents one vote, so to calculate the total number of votes cast I needed to calculate how many rows there are.
-
-'''ruby
+Each row in [Election_results](docs/election_results.csv) represents one vote, so to calculate the total number of votes cast I needed to calculate how many rows there are.
+```
 for row in reader:
   total_votes = total_votes + 1
-'''
-
-
-
+```
 - Breakdown of the number of votes and the percentage of total votes for each county in the precinct
-
+The candidate name is the third column in 
 - County with the largest number of votes
 
 - Breakdown of the number of votes and the percentage of the total votes each candidate received

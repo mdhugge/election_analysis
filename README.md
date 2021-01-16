@@ -12,7 +12,7 @@ Perorm an elction audit for the Colorado congressional election using Python. Th
 8. The county with the highest turnout
 
 ## Election-Audit Results
-
+![election_analysis](https://github.com/mdhugge/election_analysis/blob/main/Analysis/election_analysis.txt)
 - Number of votes cast in this congressional election
 
 - Breakdown of the number of votes and the percentage of total votes for each county in the precinct

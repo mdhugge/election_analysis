@@ -17,7 +17,7 @@ Perorm an elction audit for the Colorado congressional election using Python. Th
 - Number of votes cast in this congressional election
 Each row in the document represents one vote, so to calculate the total number of votes cast I needed to calculate how many rows there are.
 
-'''
+'''ruby
 for row in reader:
   total_votes = total_votes + 1
 '''

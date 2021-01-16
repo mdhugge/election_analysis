@@ -25,7 +25,7 @@ for row in reader:
 
 - Breakdown of the number of votes and the percentage of total votes for each county in the precinct
 
-The caounty name is the second column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the name of each count and add it to a list of all counties. An 'if' statement was used to ensure that each county was only included once in the list and to begin tracking the number of votes cast in each county. A 'for' loop was used to calculate the total number of votes for each county and precentage of votes each count cast. 
+The county name is the second column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the name of each county and add it to a list of all counties. An 'if' statement was used to ensure that each county was only included once in the list and to begin tracking the number of votes cast in each county. A 'for' loop was used to calculate the total number of votes for each county and precentage of votes each county cast. 
 
 ```
 for row in reader:
@@ -74,6 +74,7 @@ for candidate_name in candidate_votes:
 ```
 
 - Wiinning candidate, their vote count, and their percentage of the total votes
+
 An 'if' statement was used to determine the winning candidate, the number of votes they recieved and the percentage of total votes they received. 
 
 ```
@@ -86,3 +87,4 @@ for candidate_name in candidate_votes:
 ```
 
 ## Election-Audit Summary
+

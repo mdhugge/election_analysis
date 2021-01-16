@@ -86,7 +86,7 @@ for candidate_name in candidate_votes:
 
 ![Candidate](https://github.com/mdhugge/election_analysis/blob/main/Resources/Candidate.png)
 
-- Wiinning candidate, their vote count, and their percentage of the total votes
+- Winning candidate, their vote count, and their percentage of the total votes
 
 An if statement was used to determine the winning candidate, the number of votes they recieved and the percentage of total votes they received. 
 

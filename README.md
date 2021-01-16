@@ -13,6 +13,7 @@ Perorm an election audit for the Colorado congressional election using Python. T
 
 ## Resources
 Data Source: [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv)
+
 Software: Python 3.7.6, Visual Studio Code 1.52
 
 ## Election Audit Results

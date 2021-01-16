@@ -15,7 +15,7 @@ Perorm an elction audit for the Colorado congressional election using Python. Th
 ![Election_Analysis](https://github.com/mdhugge/election_analysis/blob/main/Analysis/Election_Analysis.png)
 
 - Number of votes cast in this congressional election
-Each row in [Election_results](docs/election_results.csv) represents one vote, so to calculate the total number of votes cast I needed to calculate how many rows there are.
+###Each row in [election_results](docs/election_results.csv) represents one vote, so to calculate the total number of votes cast I needed to calculate how many rows there are.
 ```
 for row in reader:
   total_votes = total_votes + 1

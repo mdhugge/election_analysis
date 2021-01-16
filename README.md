@@ -11,6 +11,10 @@ Perorm an elction audit for the Colorado congressional election using Python. Th
 7. Percentage of votes from each county out of the total count
 8. The county with the highest turnout
 
+## Resources
+Data Source: [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv)
+Software: Python 3.7.6, Visual Studio Code 1.52
+
 ## Election Audit Results
 ![Election_Analysis](https://github.com/mdhugge/election_analysis/blob/main/Analysis/Election_Analysis.png)
 
@@ -87,4 +91,6 @@ for candidate_name in candidate_votes:
 ```
 
 ## Election Audit Summary
+This code uses variables and indexing to reference candidates and counties from [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv). Since, the names of candidates and counties are not fixed in the code, it makes it easy to use the same code for other congressional elections with different candidates and counties as long as the data file follows a similar structure.
 
+The data that was used to create this code only included the county location of each candidate. If the data included other information such as the district each voter resides in the code could be modified to determine the number of votes cast in each district and the district with the highest turnover. This new code would be very similar to the code that was written to determine county specific statistics in this election. This code could also be modified to look at the winning candidate for each county, by determining the number of votes cast for each candidate in every county. 

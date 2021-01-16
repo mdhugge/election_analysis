@@ -15,17 +15,74 @@ Perorm an elction audit for the Colorado congressional election using Python. Th
 ![Election_Analysis](https://github.com/mdhugge/election_analysis/blob/main/Analysis/Election_Analysis.png)
 
 - Number of votes cast in this congressional election
-### Each row in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv) represents one vote, so to calculate the total number of votes cast I needed to calculate how many rows there are.
+
+Each row in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv) represents one vote, so to calculate the total number of votes cast I needed to calculate how many rows there are.
+
 ```
 for row in reader:
   total_votes = total_votes + 1
 ```
+
 - Breakdown of the number of votes and the percentage of total votes for each county in the precinct
-The candidate name is the third column in 
+
+The caounty name is the second column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the name of each count and add it to a list of all counties. An 'if' statement was used to ensure that each county was only included once in the list and to begin tracking the number of votes cast in each county. A 'for' loop was used to calculate the total number of votes for each county and precentage of votes each count cast. 
+
+```
+for row in reader:
+  county_name = row[1]
+  
+  if county_name not in county_options:
+    county_options.append(county_name)
+    county_votes[county_name] = 0
+  
+  county_votes[county_name] += 1
+
+for county_name in county_votes:
+  votes_percounty = county_votes[county_name]
+  vote_percentage_county = float(votes_percounty) / float(total_votes) * 100
+```
+
 - County with the largest number of votes
+
+An 'if' statement was used to determine the county with the largest turnover. 
+
+```
+for county_name in county_votes:
+
+  if (votes_percounty > county_count):
+    county_count = votes_percounty
+    winning_county = county_name 
+```
 
 - Breakdown of the number of votes and the percentage of the total votes each candidate received
 
+The candidate name is the third column in [election_results](https://github.com/mdhugge/election_analysis/blob/main/Resources/election_results.csv), so using an index I was able to obtain the candidate name and add it to a list of all candidates. An 'if' statement was used to ensure that each candidate was only included once in the list and to begin tracking the number of votes for each candidate. A 'for' loop was used to calculate the total number of votes for each candidate and precentage of votes each candidate won. 
+
+```
+for row in reader:
+  candidate_name = row[2]
+  
+  if candidate_name not in candidate_options:
+    candidate_options.append(candidate_name)
+    candidate_votes[candidate_name] = 0
+  
+  candidate_votes[candidate_name] += 1
+
+for candidate_name in candidate_votes:
+  votes = candidate_votes.get(candidate_name)
+  vote_percentage = float(votes) / float(total_votes) * 100
+```
+
 - Wiinning candidate, their vote count, and their percentage of the total votes
+An 'if' statement was used to determine the winning candidate, the number of votes they recieved and the percentage of total votes they received. 
+
+```
+for candidate_name in candidate_votes:
+
+  if (votes > winning_count) and (vote_percentage > winning_percentage):
+    winning_count = votes
+    winning_candidate = candidate_name
+    winning_percentage = vote_percentage 
+```
 
 ## Election-Audit Summary

@@ -1,7 +1,7 @@
 # Election Analysis
 
 ## Overview of Election Audit
-Perorm an election audit for the Colorado congressional election using Python. The Colorado Board of Elections has requested the following information:
+Perform an election audit for the Colorado congressional election using Python. The Colorado Board of Elections has requested the following information:
 1. Total number of votes cast
 2. List of candidates that received votes
 3. Number of votes received by each candidate
